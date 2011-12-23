@@ -12,8 +12,7 @@ USAGE
         });
     </script>
 
-Options
--------
+### Options
 
     'align' : 'left'/'right'
 Text alignment in input. Default: 'right'
