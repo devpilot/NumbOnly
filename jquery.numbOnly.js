@@ -3,9 +3,9 @@
  * 
  * Copyright 2011, Pilot
  * 
- * Dual licensed under the MIT and GPL Version 2licenses:
+ * Dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
- *   http://www.gnu.org/licenses/gpl.html TODO fix license link
+ *   http://www.gnu.org/licenses/gpl.html
  */
 
 (function( $ ){

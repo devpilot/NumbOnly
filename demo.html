@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Numbers only demo</title>
+        <title>NumbOnly demo</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
         <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-        <script type="text/javascript" src="numbOnly.jquery.js"></script>
-        <link type="text/css" rel="stylesheet" href="numbOnly.css" media="screen" />
+        <script type="text/javascript" src="jquery.numbOnly.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#numb').numbOnly();
+            });
+        </script>
     </head>
     <body>
-        <div>
-            <form action="" method="GET">
-                <input type="number" name="n" />
-            </form>
-        </div>
+        <input type="text" id="numb" />
     </body>
 </html>
