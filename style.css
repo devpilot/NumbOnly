@@ -1,0 +1,9 @@
+/* jQuery.NumbOnly 1.1 Stylesheet */
+
+.no_tip {
+    position:absolute;
+    display: none;
+    background: #FFC;
+    color: #ff3333;
+    border: 1px solid #ff3333;
+}
