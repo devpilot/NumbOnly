@@ -25,8 +25,7 @@
             || (e.keyCode >= 35 && e.keyCode <= 40)                                 // arrow keys/home/end
             )
         ) {
-                $(e.target).next('.no_tip').fadeIn().delay(500).fadeOut();
-            // TODO tip goes here
+            $(e.target).next('.no_tip').fadeIn().delay(500).fadeOut();
             e.preventDefault();
         }
     }
@@ -72,6 +71,7 @@
             
             // create tip div if option set to true
                 posTip(o,opt.showTip,opt.message);
+                
             // recreate tip on browser resize
             $(window).resize(function(){
                 posTip(o,opt.showTip,opt.message);
