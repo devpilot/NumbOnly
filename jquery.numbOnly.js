@@ -1,5 +1,5 @@
 /*
- * jQuery NumberOnly plugin 1.0
+ * jQuery NumberOnly plugin 1.1
  * 
  * Copyright 2011, Pilot
  * 
