@@ -12,7 +12,7 @@
     
     // variable declaration
     var value;
-    
+
     // allowed keycodes
     function num(e,negatieve,decimal){
         if(!((e.keyCode >= 96 && e.keyCode <= 105)                                  // numbers on keypad
@@ -25,6 +25,7 @@
             || (e.keyCode >= 35 && e.keyCode <= 40)                                 // arrow keys/home/end
             )
         ) {
+                $(e.target).next('.no_tip').fadeIn().delay(500).fadeOut();
             // TODO tip goes here
             e.preventDefault();
         }
@@ -40,6 +41,17 @@
         return !rx.test(val);
     }
     
+    function posTip(object, show, message){
+        if(show){
+            // prevent creation of duplicate no_tip div per element on resize
+        object.next('.no_tip').remove();
+        // getting element position and width
+        var p = object.offset();
+        var w = 3 + object.width();
+        object.after('<div class="no_tip" style="top:'+(p.top)+'px;left:'+(p.left + w)+'px;">'+message+'</div>');
+        }
+    }
+    
     // plugin name
     $.fn.numbOnly = function(options) {
         
@@ -47,7 +59,9 @@
         var opt = $.extend({
             'align' : 'right',
             'negative' : false,
-            'decimal' : true
+            'decimal' : true,
+            'showTip' : true,
+            'message' : 'Numerics, . and - only'
         },options);
         
         // return this to maintain chainability
@@ -55,6 +69,13 @@
             
             // o is now the element
             var o = $(this);
+            
+            // create tip div if option set to true
+                posTip(o,opt.showTip,opt.message);
+            // recreate tip on browser resize
+            $(window).resize(function(){
+                posTip(o,opt.showTip,opt.message);
+            })
             o.keyup(function(){
                 value = o.val();
             }).keydown(function(e){
