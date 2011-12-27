@@ -43,11 +43,11 @@
     function posTip(object, show, message){
         if(show){
             // prevent creation of duplicate no_tip div per element on resize
-        object.next('.no_tip').remove();
-        // getting element position and width
-        var p = object.offset();
-        var w = 3 + object.width();
-        object.after('<div class="no_tip" style="top:'+(p.top)+'px;left:'+(p.left + w)+'px;">'+message+'</div>');
+            object.next('.no_tip').remove();
+            // getting element position and width
+            var p = object.offset();
+            var w = 3 + object.width();
+            object.after('<div class="no_tip" style="top:'+(p.top)+'px;left:'+(p.left + w)+'px;">'+message+'</div>');
         }
     }
     
@@ -70,7 +70,7 @@
             var o = $(this);
             
             // create tip div if option set to true
-                posTip(o,opt.showTip,opt.message);
+            posTip(o,opt.showTip,opt.message);
                 
             // recreate tip on browser resize
             $(window).resize(function(){
