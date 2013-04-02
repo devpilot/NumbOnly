@@ -31,7 +31,7 @@ Allow one minus(-) sign in input. Default : `False`
 Allow decimal(.) once in input. Default : `True`
 
 ```javascript
-'showTip : boolean
+'showTip' : boolean
 ```
 Show tip message on wrong input. Default : `True`
 

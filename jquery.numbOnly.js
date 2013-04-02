@@ -1,5 +1,5 @@
 /*
- * jQuery NumberOnly plugin 1.1
+ * jQuery NumberOnly plugin 1.1.1
  * 
  * Copyright 2011, Pilot
  * 
@@ -25,7 +25,7 @@
             || (e.keyCode >= 35 && e.keyCode <= 40)                                 // arrow keys/home/end
             )
         ) {
-            $(e.target).next('.no_tip').fadeIn().delay(500).fadeOut();
+            $(e.target).next('.no_tip').stop(false,true).fadeIn(1000).stop(false,true).fadeOut(1000);
             e.preventDefault();
         }
     }
