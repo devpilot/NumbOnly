@@ -1,11 +1,13 @@
-jQuery.numbOnly
-==================
+# Warning!
+Plugin is no longer maintined, please use HTML `<input type="number" />` instead
+
+# jQuery.numbOnly
 
 A jQuery plugin allows only numerics in HTML inputs. It has option for allowing 
 negative and decimal also. On wrong input display popup tip.
 
-Usage
------
+## Usage
+
 ```html
 <script type="text/javascript">
     $(document).ready(function(){
@@ -14,7 +16,8 @@ Usage
 </script>
 ```
 
-### Options`
+### Options
+
 ```javascript
 'align' : 'left'/'right'
 ```
@@ -39,8 +42,7 @@ Show tip message on wrong input. Default : `True`
 'message' : '<Custom message to display in tip>'
 ```
 
-License
--------
+## License
 
 Dual licensed under the [MIT](http://www.opensource.org/licenses/mit-license.php) 
 and [GPL](http://www.gnu.org/licenses/gpl.html) licenses.
